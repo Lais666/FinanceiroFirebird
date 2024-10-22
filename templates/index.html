@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+             {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+            <h1>Olá, {{ session['nome'] }} vulgo POBRE</h1>
+            <a href="{{ url_for('logout') }}" class="btn logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Total de Receitas</h2>
+                <p class="total">R$ {{ total_receita }}</p>
+            </div>
+            <div class="card">
+                <h2>Total de Despesas</h2>
+                <p class="total">R$ {{ total_despesa }}</p>
+            </div>
+        </div>
+        <div class="actions">
+            <a href="/lista_receitas" class="btn action-btn">Lista de Receitas</a>
+            <a href="/lista_despesas" class="btn action-btn">Lista de Despesas</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Sistema de Finanças</p>
+    </footer>
+</body>
+</html>

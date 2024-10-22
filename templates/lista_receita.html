@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Receitas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard de Receitas</h1>
+        </header>
+
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Ações principais -->
+        <div class="actions">
+            <a href="{{ url_for('cria_receita') }}" class="btn primary">Adicionar Receita</a>
+            <a href="{{ url_for('inicio') }}" class="btn secondary">Home</a>
+        </div>
+
+        <!-- Tabela de Receitas -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for receita in receitas %}
+                <tr>
+                    <td>{{ receita[0] }}</td>
+                    <td>{{ receita[1] }}</td>
+                    <td>R$ {{ receita[2] }}</td>
+                    <td>{{ receita[3] }}</td>
+                    <td class="actions-column">
+                        <a href="{{ url_for('edita_receita', id=receita[0]) }}" class="btn edit">Editar</a>
+                        <form action="{{ url_for('exclui_receita', id=receita[0]) }}" method="POST" class="inline-form">
+                            <button type="submit" class="btn delete">Deletar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
