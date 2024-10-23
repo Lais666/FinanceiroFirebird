@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="pg-lista">
     <div class="container">
         <header>
             <h1>Dashboard de Despesas</h1>
@@ -46,7 +46,7 @@
                 <tr>
                     <td>{{ despesa[0] }}</td>
                     <td>{{ despesa[1] }}</td>
-                    <td>R$ {{ despesa[2] }}</td>
+                    <td>R$ {{ despesa[2] | round(2) }}</td>
                     <td>{{ despesa[3] }}</td>
                     <td class="actions-column">
                         <a href="{{ url_for('edita_despesa', id=despesa[0]) }}" class="btn edit">Editar</a>

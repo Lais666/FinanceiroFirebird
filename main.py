@@ -59,6 +59,8 @@ def inicio():
         cursor.execute('SELECT coalesce(VALOR_DESPESA,0) FROM DESPESA where id_usuario = ?', (id_usuario,))
         for row in cursor.fetchall():
             total_despesa = total_despesa + row[0]
+
+        total_perda_lucro = total_receita - total_despesa
     except Exception as e:
         total_receita = 0
         total_despesa = 0
@@ -67,7 +69,10 @@ def inicio():
     finally:
         cursor.close()
     # Aqui você pode renderizar um template ou retornar os valores
-    return render_template('index.html', total_receita=total_receita, total_despesa=total_despesa)
+    total_receita = f"{total_receita:.2f}"
+    total_despesa = f"{total_despesa:.2f}"
+    total_perda_lucro = f"{total_perda_lucro:.2f}"
+    return render_template('index.html', total_receita=total_receita, total_despesa=total_despesa, total_perda_lucro=total_perda_lucro)
 
 
 @app.route('/cria_usuario', methods=['GET'])
@@ -169,7 +174,7 @@ def adiciona_despesa():
         cursor.execute('INSERT INTO DESPESA(NOME, VALOR_DESPESA, DATA, ID_USUARIO) VALUES (?, ?, ?, ?)', (nome, valor_receita, data_despesa, id_usuario))
         con.commit()
         flash('Despesa adicionada com sucesso!')
-        return redirect(url_for('inicio'))
+        return redirect(url_for('lista_despesas'))
 
     except Exception as e:
         flash(f'Falha ao cadastrar despesa! {e}')
@@ -199,7 +204,7 @@ def adiciona_receita():
         cursor.execute('INSERT INTO RECEITA (NOME, VALOR_RECEITA, DATA, ID_USUARIO) VALUES (?, ?, ?, ?)', (nome, valor_receita, data_receita, id_usuario))
         con.commit()
         flash('Receita adicionada com sucesso!')
-        return redirect(url_for('inicio'))
+        return redirect(url_for('lista_receitas'))
 
     except Exception as e:
         flash(f'Falha ao cadastrar Receita! {e}')

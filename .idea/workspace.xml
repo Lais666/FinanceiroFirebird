@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c8d713d-361b-43a2-874c-3e365d4980ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ProjetoFinanceiro.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/adiciona_usuario.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edita_despesa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edita_receita.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/lista_despesa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/lista_receita.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nova_despesa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nova_receita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/adiciona_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/adiciona_usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edita_despesa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edita_despesa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edita_receita.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edita_receita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lista_despesa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lista_despesa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lista_receita.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lista_receita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nova_despesa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nova_despesa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nova_receita.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nova_receita.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +51,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SN1089702/PycharmProjects/ProjetoFinanceiro&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -129,7 +124,14 @@
       <workItem from="1729520219546" duration="500000" />
       <workItem from="1729520752454" duration="5436000" />
       <workItem from="1729535933729" duration="5710000" />
-      <workItem from="1729594994662" duration="2593000" />
+      <workItem from="1729594994662" duration="3907000" />
+      <workItem from="1729599173569" duration="236000" />
+      <workItem from="1729599594583" duration="64000" />
+      <workItem from="1729600050799" duration="1505000" />
+      <workItem from="1729681042775" duration="71000" />
+      <workItem from="1729701609065" duration="3953000" />
+      <workItem from="1729706937485" duration="428000" />
+      <workItem from="1729707370204" duration="2827000" />
     </task>
     <servers />
   </component>
@@ -140,6 +142,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjetoFinanceiro$main.coverage" NAME="main Coverage Results" MODIFIED="1729597592107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjetoFinanceiro$main.coverage" NAME="main Coverage Results" MODIFIED="1729710119084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
